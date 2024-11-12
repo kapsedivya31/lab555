@@ -19,7 +19,7 @@ http.StatusBadRequest)
  }  
  b, err := strconv.Atoi(bStr) 
  if err != nil { 
-  http.Error(w, "Parameter 'b' must be an integer", 
+  http.Error(w, "Parameter 'b' must be an int", 
 http.StatusBadRequest) 
   return 
  } 
