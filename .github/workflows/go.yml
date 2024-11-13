@@ -45,12 +45,5 @@ jobs:
             aws_region: "ap-south-1" 
             aws_bucket: ${{ secrets.TARGET_BUCKET }} 
             target: .
-        - name: ssh-scp-ssh-pipelines 
-          uses: cross-the-world/ssh-scp-ssh-pipelines@v1.1.4 
-          with: 
-              host: 65.0.55.76 
-              user: ec2-user 
-              key: ${{ secrets.PRIVATE_KEY }} 
-              scp: ./addition.go => /home/ec2-user/app/addition.go 
-              last_ssh: chmod +x /home/ec2-user/app/addition.go
+        
         
